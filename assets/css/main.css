@@ -3776,3 +3776,9 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.sitename{
+  font-family: "Space Mono", monospace;
+  font-weight: 100;
+
+}
