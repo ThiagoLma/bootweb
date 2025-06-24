@@ -1,16 +1,3 @@
-/**
-* Template Name: Strategy
-* Template URL: https://bootstrapmade.com/strategy-bootstrap-agency-template/
-* Updated: Jun 06 2025 with Bootstrap v5.3.6
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito Sans",  sans-serif;
@@ -823,11 +810,11 @@ section,
 }
 
 .hero .main-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero .main-heading h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -3770,13 +3757,14 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-
-
+/*--------------------------------------------------------------*/
 .sitename{
   font-family: "Space Mono", monospace;
   font-weight: 100;
+}
 
+#btninicial{
+  margin-top: 0.35rem;
+  color: var(--contrast-color);
+  margin-right: 1.5rem;
 }
