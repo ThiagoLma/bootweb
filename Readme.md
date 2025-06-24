@@ -1,7 +1,7 @@
 <div display="inline-block">
 
  <h1 align="center">Olá pessoal! Sou Thiago Lima.</h1>
- <strong><p align="center"> Desenvolvedor web focado na criação de sites e landing pages. </p></strong>
+ <strong><p align="center">Sou um **desenvolvedor web dedicado**, com expertise na criação de soluções digitais sob medida. Meu foco principal é o desenvolvimento de **sites e landing pages de alta performance** que não apenas cativam visualmente, mas também são otimizados para **conversão e experiência do usuário**. Eu me empenho em transformar as ideias e objetivos dos meus clientes em uma presença online impactante, garantindo que cada projeto seja responsivo, funcional e alinhado com as últimas tendências do mercado.</p></strong>
 </br>
 </br>
 </br>
@@ -25,7 +25,6 @@
 </br>
 </br>
 
----
 
 ### Meu Portfólio Online:
 
@@ -39,4 +38,3 @@
 </br>
 
 ---
-
