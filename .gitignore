@@ -1,0 +1,13 @@
+# Docker volumes
+db_data/
+phpmyadmin_sessions/
+
+# PHP Composer dependencies (if you use Composer)
+vendor/
+
+# Environment variables files (often contain sensitive info)
+.env
+
+# Operating System Specific
+.DS_Store # macOS
+Thumbs.db # Windows

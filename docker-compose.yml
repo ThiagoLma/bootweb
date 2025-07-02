@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: meusql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Adm1n@RN # SENHA FORTE AQUI!
+      MYSQL_DATABASE: meu_banco_de_dados
+      MYSQL_USER: thiago
+      MYSQL_PASSWORD: Adm1n@RN # Senha do usuário
+    volumes:
+      - ./db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: meu_phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: Adm1n@RN # Mesma senha root do serviço 'db'
+    ports:
+      - "8080:80"
+    volumes:
+      - ./phpmyadmin_sessions:/sessions
+
+  php:
+    build:
+      context: ./php-docker
+      dockerfile: Dockerfile
+    container_name: meu_php_fpm
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - db
+
+  # NOVO SERVIÇO: Nginx como servidor web
+  webserver:
+    image: nginx:latest
+    container_name: meu_nginx_webserver
+    ports:
+      - "80:80" # Mapeia a porta 80 da sua máquina para a porta 80 do Nginx
+    volumes:
+      - ./app:/var/www/html # Mapeia sua pasta 'app' local para o servidor web
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf # Mapeia a configuração do Nginx
+    depends_on:
+      - php # Nginx precisa do PHP-FPM para processar arquivos PHP
